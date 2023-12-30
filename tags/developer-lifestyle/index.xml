@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>developer lifestyle on Shima Dot Dev Blog</title>
+    <link>https://shimadotdev.github.io/tags/developer-lifestyle/</link>
+    <description>Recent content in developer lifestyle on Shima Dot Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shimadotdev.github.io/tags/developer-lifestyle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Developer Lifestyle</title>
+      <link>https://shimadotdev.github.io/posts/developer-lifestyle/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://shimadotdev.github.io/posts/developer-lifestyle/</guid>
+      <description>Usually, until everything is in order and going well, we do not realize the importance of having a proper and healthy lifestyle. However, it is enough for a gradual increase in weight, joint problems, etc., to occur for us to remember that we need to make changes in our daily routine. In this article, I have specifically written about my experiences in life and work.&#xA;1. Exercise Even if you don&amp;rsquo;t have a weight problem, incorporating regular exercise (for example, three days a week) not only helps maintain a desirable weight but also reduces stress associated with work.</description>
+    </item>
+  </channel>
+</rss>

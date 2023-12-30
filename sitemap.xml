@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shimadotdev.github.io/tags/developer-lifestyle/</loc>
+    <lastmod>2017-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/posts/developer-lifestyle/</loc>
+    <lastmod>2017-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/tags/lifestyle/</loc>
+    <lastmod>2017-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/posts/</loc>
+    <lastmod>2017-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/</loc>
+    <lastmod>2017-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/tags/</loc>
+    <lastmod>2017-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shimadotdev.github.io/tags/developer-experience/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,21 +48,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://shimadotdev.github.io/tags/good-api/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shimadotdev.github.io/posts/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shimadotdev.github.io/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shimadotdev.github.io/tags/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
