@@ -1,0 +1,327 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Docker Guide for Beginners: What is Docker? - Shima Dot Dev Blog</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="In recent years, we have frequently heard the name &ldquo;Docker.&rdquo; The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey.
+I would like to remind you that this series consists of three posts, and two other articles titled &ldquo;Docker Guide for Beginners: Key Terms in Docker&rdquo; and &ldquo;Docker Guide for Beginners: Defining Dockerfile, Building Images, and Running Containers&rdquo; are also available." />
+  <meta name="author" content="Shima Dot Dev Blog" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://shimadotdev.github.io/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://shimadotdev.github.io/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://shimadotdev.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="https://shimadotdev.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://shimadotdev.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.121.1">
+
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="Docker Guide for Beginners: What is Docker?">
+<meta itemprop="description" content="In recent years, we have frequently heard the name “Docker.” The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey."><meta itemprop="datePublished" content="2018-05-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-05-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="510">
+<meta itemprop="keywords" content="Docker For Beginners,Containerization,DevOps," />
+  
+  <meta property="og:title" content="Docker Guide for Beginners: What is Docker?" />
+<meta property="og:description" content="In recent years, we have frequently heard the name “Docker.” The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shimadotdev.github.io/posts/whats-docker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-05-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-04T00:00:00+00:00" />
+
+
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Docker Guide for Beginners: What is Docker?"/>
+<meta name="twitter:description" content="In recent years, we have frequently heard the name “Docker.” The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey."/>
+
+  
+  
+  
+  <link rel="canonical" href="https://shimadotdev.github.io/posts/whats-docker/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="https://shimadotdev.github.io/"
+      >Shima Dot Dev Blog</a
+    >
+    
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Docker Guide for Beginners: What is Docker?</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>May 4, 2018</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>In recent years, we have frequently heard the name &ldquo;Docker.&rdquo; The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey.</p>
+<p><em>I would like to remind you that this series consists of three posts, and two other articles titled &ldquo;Docker Guide for Beginners: Key Terms in Docker&rdquo; and &ldquo;Docker Guide for Beginners: Defining Dockerfile, Building Images, and Running Containers&rdquo; are also available.</em></p>
+<p><strong>What is Docker?</strong></p>
+<p>According to Docker itself, Docker is a tool for building, shipping, and running applications easily. One of the key concepts in Docker is the container. Containers use virtualization at the operating system level to isolate resources. Containers and virtual machines operate similarly, but containers isolate resources at the operating system level, while virtual machines do so at the hardware level, leading to differences in performance and behavior. We will try to better understand the concept of containers by comparing these two tools.</p>
+<p><strong>Differences Between Virtual Machines and Containers</strong></p>
+<p>Virtual machines, with the help of a hypervisor, abstract one server into multiple servers. The hypervisor is a software, middleware, or hardware monitor for virtual machines, placed directly on the host machine&rsquo;s hardware, distributing resources like RAM and CPU among virtual machines.</p>
+<p>These virtual machines are referred to as guest machines. A guest machine includes the application and everything needed to run it, from system management to necessary libraries and the entire hardware stack, including CPU, RAM, etc., virtually allocated to it. Virtual machines each have their own separate operating system, with libraries and applications placed on top.</p>
+<p>Now, containers. Like virtual machines, containers have their own isolated space for processing, including libraries, allocated resources such as CPU, RAM, and network. However, containers differ in that they share the host machine&rsquo;s operating system kernel, which enhances their performance.</p>
+<p>Containers require less space compared to virtual machines, allowing them to divide available resources among a greater number of applications.</p>
+<p>Below are images from the Docker website to help us better understand.</p>
+<ul>
+<li><img src="/images/container-vm-whatcontainer_2-1.png" alt="Virtual Machine Configuration"></li>
+<li><img src="/images/docker-containerized-appliction-blue-border_2.png" alt="Docker and Container Configuration"></li>
+</ul>
+<p><strong>Why Use Docker?</strong></p>
+<p>a. Docker has made the process easy for everyone by providing tools and clients to build applications quickly and easily on personal computers. This allows anyone to run their applications rapidly without the need for modifications on cloud servers or elsewhere.</p>
+<p>b. As mentioned earlier, Docker&rsquo;s high speed and lightweight nature make it a suitable option for work due to sharing the operating system kernel, allocating fewer resources while creating a separate and isolated space.</p>
+<p>c. On the other hand, Docker&rsquo;s extensive community (Docker Hub), ready-made images, and the layered structure of these images - which we will explain later - make container creation and development easier.</p>
+<p>d. Additionally, with the ability to create separate containers for software components (breaking down the application into various modules: Redis, MySQL, etc.) and the ease of communication between these components, Docker enables their independent development in the future.</p>
+<p><em>In the next post titled &ldquo;Docker Guide for Beginners: Key Terms in Docker,&rdquo; we will become familiar with concepts and keywords used in Docker.</em></p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/docker-for-beginners"
+      >Docker For Beginners</a
+    >
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/containerization"
+      >Containerization</a
+    >
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/devops"
+      >DevOps</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://shimadotdev.github.io/posts/telegram-bot/"
+      ><span>How I Became a Superstar with a Telegram Bot!</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://shimadotdev.github.io/">Shima Dot Dev Blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>
