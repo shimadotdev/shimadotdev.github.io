@@ -6,12 +6,12 @@
     <description>Recent content in DevOps on Shima Dot Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://shimadotdev.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker Guide for Beginners: What is Docker?</title>
       <link>https://shimadotdev.github.io/posts/whats-docker/</link>
-      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://shimadotdev.github.io/posts/whats-docker/</guid>
       <description>In recent years, we have frequently heard the name &amp;ldquo;Docker.&amp;rdquo; The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey.&#xA;I would like to remind you that this series consists of three posts, and two other articles titled &amp;ldquo;Docker Guide for Beginners: Key Terms in Docker&amp;rdquo; and &amp;ldquo;Docker Guide for Beginners: Defining Dockerfile, Building Images, and Running Containers&amp;rdquo; are also available.</description>
     </item>

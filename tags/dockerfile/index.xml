@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker For Beginners on Shima Dot Dev Blog</title>
-    <link>https://shimadotdev.github.io/tags/docker-for-beginners/</link>
-    <description>Recent content in Docker For Beginners on Shima Dot Dev Blog</description>
+    <title>Dockerfile on Shima Dot Dev Blog</title>
+    <link>https://shimadotdev.github.io/tags/dockerfile/</link>
+    <description>Recent content in Dockerfile on Shima Dot Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://shimadotdev.github.io/tags/docker-for-beginners/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shimadotdev.github.io/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker Guide for Beginners: Keywords in Docker</title>
       <link>https://shimadotdev.github.io/posts/docker-keyword/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://shimadotdev.github.io/posts/docker-keyword/</guid>
       <description>Docker Engine The Docker Engine is the layer on which Docker runs, and its task is to manage containers, images, building, etc. This layer sits right above the host machine&amp;rsquo;s operating system and performs its tasks by receiving commands from the client (for example, the terminal).&#xA;Dockerfile A Dockerfile is where the necessary instructions for building an image are written. If you take a look at existing Dockerfiles, you will see sample commands like RUN apt-get install something; these commands allow us to install necessary packages for running software in an isolated container environment, assign ports, or define directories.</description>
-    </item>
-    <item>
-      <title>Docker Guide for Beginners: What is Docker?</title>
-      <link>https://shimadotdev.github.io/posts/whats-docker/</link>
-      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://shimadotdev.github.io/posts/whats-docker/</guid>
-      <description>In recent years, we have frequently heard the name &amp;ldquo;Docker.&amp;rdquo; The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey.&#xA;I would like to remind you that this series consists of three posts, and two other articles titled &amp;ldquo;Docker Guide for Beginners: Key Terms in Docker&amp;rdquo; and &amp;ldquo;Docker Guide for Beginners: Defining Dockerfile, Building Images, and Running Containers&amp;rdquo; are also available.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,337 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Docker Guide for Beginners: Keywords in Docker - Shima Dot Dev Blog</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Docker Engine The Docker Engine is the layer on which Docker runs, and its task is to manage containers, images, building, etc. This layer sits right above the host machine&rsquo;s operating system and performs its tasks by receiving commands from the client (for example, the terminal).
+Dockerfile A Dockerfile is where the necessary instructions for building an image are written. If you take a look at existing Dockerfiles, you will see sample commands like RUN apt-get install something; these commands allow us to install necessary packages for running software in an isolated container environment, assign ports, or define directories." />
+  <meta name="author" content="Shima Dot Dev Blog" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://shimadotdev.github.io/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://shimadotdev.github.io/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://shimadotdev.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="https://shimadotdev.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://shimadotdev.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.121.1">
+
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="Docker Guide for Beginners: Keywords in Docker">
+<meta itemprop="description" content="In recent years, we have frequently heard the name “Docker.” The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey."><meta itemprop="datePublished" content="2018-08-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-08-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="592">
+<meta itemprop="keywords" content="Docker For Beginners,UnionFS,Dockerfile," />
+  
+  <meta property="og:title" content="Docker Guide for Beginners: Keywords in Docker" />
+<meta property="og:description" content="In recent years, we have frequently heard the name “Docker.” The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shimadotdev.github.io/posts/docker-keyword/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-08-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-21T00:00:00+00:00" />
+
+
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Docker Guide for Beginners: Keywords in Docker"/>
+<meta name="twitter:description" content="In recent years, we have frequently heard the name “Docker.” The following article is a simple and easy guide to familiarize beginners with Docker and its basic concepts, along with exercises. Join us on this journey."/>
+
+  
+  
+  
+  <link rel="canonical" href="https://shimadotdev.github.io/posts/docker-keyword/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="https://shimadotdev.github.io/"
+      >Shima Dot Dev Blog</a
+    >
+    
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Docker Guide for Beginners: Keywords in Docker</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Aug 21, 2018</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="docker-engine">Docker Engine</h2>
+<p>The Docker Engine is the layer on which Docker runs, and its task is to manage containers, images, building, etc. This layer sits right above the host machine&rsquo;s operating system and performs its tasks by receiving commands from the client (for example, the terminal).</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<p>A Dockerfile is where the necessary instructions for building an image are written. If you take a look at existing Dockerfiles, you will see sample commands like <code>RUN apt-get install something</code>; these commands allow us to install necessary packages for running software in an isolated container environment, assign ports, or define directories.</p>
+<h3 id="sample-dockerfile">Sample Dockerfile:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#75715e">#This is a sample Image </span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> ubuntu </span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">MAINTAINER</span><span style="color:#e6db74"> nina@dobrev.com</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get update <span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get install –y nginx <span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#960050;background-color:#1e0010">“echo”</span>,<span style="color:#960050;background-color:#1e0010">”Image</span> <span style="color:#960050;background-color:#1e0010">created”</span>] <span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="image">Image</h2>
+<p>Images are read-only templates created through the commands written in the Dockerfile.</p>
+<h2 id="container">Container</h2>
+<p>Containers are created using images. A container provides an isolated space containing everything an application needs to run, from the operating system to system libraries and application code. By creating a container, Docker establishes an interface for networking so that the container can communicate with the local host, assign an IP, and so on.</p>
+<p>For a better understanding of the relationship between image and container, you can think of it in terms of object-oriented programming. If an image is considered a class, then a container is an object instantiated from this class. Hundreds of containers can be created from a single image.</p>
+<h2 id="volume">Volume</h2>
+<p>A volume can be thought of as a virtual disk. This part of the container stores and shares container data (between the container and the host or between multiple containers). We have two main types of volumes:</p>
+<p>a. Persistent: Data is naturally stored in the host machine&rsquo;s file system. So, in case of destruction, updates, and rebuilding of the container, this part of the data remains untouched.</p>
+<p>b. Ephemeral: In this type, data in the container created is shared with other containers and exists as long as the containers use it. However, as soon as the containers are gone, that part of the data is also gone.</p>
+<h2 id="union-file-system">Union File System</h2>
+<p>The most interesting part related to Docker is the use of the Union File System. Before anything, it&rsquo;s necessary to understand what the Union File System is. In <a href="https://en.wikipedia.org/wiki/UnionFS">UnionFS</a>, directories and files, grouped from separate file systems in branches, allow them to create a unified file system by stacking them on top of each other.</p>
+<p><img src="/images/overlay_constructs.jpg" alt="The Structure of the Union File System in Docker">
+<em>The Structure of the Union File System in Docker</em></p>
+<p>Docker uses this feature to structure the layers of images (each instruction in an image forms a layer that is added on top of the underlying layers). Therefore, when a specific layer needs modification in an image, a copy of the layer is created, and the modifications are made on it, not the original layer. In the end, all these layers are stacked on top of each other for the container to use.</p>
+<p>It&rsquo;s worth knowing that this process is referred to as [Copy On Write (COW)].</p>
+<p>With this feature, when creating a new container from another image, there is no need to copy all the files again. Instead, it will have a pointer to the original location, so container initialization operations are performed quickly and at minimal cost.</p>
+<p>On the other hand, when you change an image, Docker only updates the specific changed layer, making its operation faster.</p>
+<p>In the next post, which is likely the last post in this series, we will focus on &ldquo;Defining a Dockerfile, Building an Image, and Launching a Container&rdquo; in a practical exercise.</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/docker-for-beginners"
+      >Docker For Beginners</a
+    >
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/unionfs"
+      >UnionFS</a
+    >
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/dockerfile"
+      >Dockerfile</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://shimadotdev.github.io/posts/whats-docker/"
+      ><span>Docker Guide for Beginners: What is Docker?</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://shimadotdev.github.io/">Shima Dot Dev Blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>
