@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workplace Visibility on Shima Dot Dev Blog</title>
+    <link>https://shimadotdev.github.io/tags/workplace-visibility/</link>
+    <description>Recent content in Workplace Visibility on Shima Dot Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shimadotdev.github.io/tags/workplace-visibility/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Became a Superstar with a Telegram Bot!</title>
+      <link>https://shimadotdev.github.io/posts/telegram-bot/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://shimadotdev.github.io/posts/telegram-bot/</guid>
+      <description>Usually, when we enter new work environments, it can be challenging to present ourselves in the right and suitable light, especially if our work experience or abilities are unclear to others, and this becomes even more difficult when you are a woman in the tech field!&#xA;About four years ago, I was introduced and invited to work at my current company through the recommendation of a former colleague (Hello Khani). It seemed that no woman had been hired there before, and as a developer, I was often perceived similarly to extraterrestrial beings D:</description>
+    </item>
+  </channel>
+</rss>
