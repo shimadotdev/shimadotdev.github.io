@@ -1,0 +1,369 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>SSH connection to GitLab with more than one user account. - Shima Dot Dev Blog</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Imagine you have a personal user account on GitLab with the email yourname@gmail.com, and now you&rsquo;ve been hired by a company. You need to connect to GitLab with the email account they provided for you (yourname@company.com). If you&rsquo;ve previously added your system&rsquo;s public key for your personal account and SSH connection, you may encounter an error when trying to add the same key for the company&rsquo;s GitLab account. This error informs you that the key has already been added because GitLab doesn&rsquo;t allow using a common SSH public key across two different user accounts." />
+  <meta name="author" content="Shima Dot Dev Blog" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://shimadotdev.github.io/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://shimadotdev.github.io/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://shimadotdev.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://shimadotdev.github.io/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://shimadotdev.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="https://shimadotdev.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://shimadotdev.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.121.1">
+
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="SSH connection to GitLab with more than one user account.">
+<meta itemprop="description" content="This article offers a beginner-friendly guide to Docker, covering core concepts such as the Docker Engine, Dockerfile, images, and containers. It explains the roles of volumes and the Union File System in Docker&#39;s architecture."><meta itemprop="datePublished" content="2021-02-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-02-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="495">
+<meta itemprop="keywords" content="GitLab,Muliple User Gitlab," />
+  
+  <meta property="og:title" content="SSH connection to GitLab with more than one user account." />
+<meta property="og:description" content="This article offers a beginner-friendly guide to Docker, covering core concepts such as the Docker Engine, Dockerfile, images, and containers. It explains the roles of volumes and the Union File System in Docker&#39;s architecture." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shimadotdev.github.io/posts/gitlab-ssh-multiple-users/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-03T00:00:00+00:00" />
+
+
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SSH connection to GitLab with more than one user account."/>
+<meta name="twitter:description" content="This article offers a beginner-friendly guide to Docker, covering core concepts such as the Docker Engine, Dockerfile, images, and containers. It explains the roles of volumes and the Union File System in Docker&#39;s architecture."/>
+
+  
+  
+  
+  <link rel="canonical" href="https://shimadotdev.github.io/posts/gitlab-ssh-multiple-users/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="https://shimadotdev.github.io/"
+      >Shima Dot Dev Blog</a
+    >
+    
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/shimadotdev"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="https://shimadotdev.github.io/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">SSH connection to GitLab with more than one user account.</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Feb 3, 2021</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>Imagine you have a personal user account on GitLab with the email <a href="mailto:yourname@gmail.com">yourname@gmail.com</a>, and now you&rsquo;ve been hired by a company. You need to connect to GitLab with the email account they provided for you (<a href="mailto:yourname@company.com">yourname@company.com</a>). If you&rsquo;ve previously added your system&rsquo;s public key for your personal account and SSH connection, you may encounter an error when trying to add the same key for the company&rsquo;s GitLab account. This error informs you that the key has already been added because GitLab doesn&rsquo;t allow using a common SSH public key across two different user accounts. Therefore, you need a new key. In this article, I will guide you on how to create a new key and easily connect via SSH to each of these accounts. Stay with me.</p>
+<h3 id="steps-for-configuring-an-ssh-key-for-connecting-to-gitlab">Steps for configuring an SSH key for connecting to GitLab</h3>
+<p>Let&rsquo;s assume your previous key (used for personal GitLab) has already been generated and exists with the name id_rsa.pub in the ssh directory of your system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.ssh/id_rsa
+</span></span></code></pre></div><p>Now, simply create a new key for your company&rsquo;s GitLab account using the following command in the terminal (<a href="https://docs.gitlab.com/ee/ssh/#generate-an-ssh-key-pair">more details</a>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;yourname@company.com&#34;</span>
+</span></span></code></pre></div><p>Press Enter, and you will be prompted with the following question in the terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Enter file in which to save the key <span style="color:#f92672">(</span>/Users/yourname/.ssh/id_rsa<span style="color:#f92672">)</span>:
+</span></span></code></pre></div><p>Enter the complete address and filename here. For example, if you want the key to be generated in a file named &lsquo;company_rsa,&rsquo; you need to enter the full address and press Enter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/Users/yourname/.ssh/company_rsa
+</span></span></code></pre></div><p>Finally, two files named <code>company_rsa</code> and <code>company_rsa.pub</code> will be generated. Just add the content of <code>company_rsa.pub</code> to GitLab. <a href="https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account">Read more details in GitLab</a></p>
+<h3 id="configuration-file-setup">Configuration File Setup</h3>
+<p>To connect through two different SSH keys for two separate accounts, simply create a file named &lsquo;config&rsquo; in the same directory and include the following commands in it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Private GitLab instance</span>
+</span></span><span style="display:flex;"><span>Host yournamePrivateUsername.gitlab.com
+</span></span><span style="display:flex;"><span>  Hostname gitlab.com
+</span></span><span style="display:flex;"><span>  Preferredauthentications publickey
+</span></span><span style="display:flex;"><span>  IdentityFile ~/.ssh/id_rsa
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Company GitLab instance</span>
+</span></span><span style="display:flex;"><span>Host yournameCompanyUsername.gitlab.com
+</span></span><span style="display:flex;"><span>  Hostname gitlab.com
+</span></span><span style="display:flex;"><span>  Preferredauthentications publickey
+</span></span><span style="display:flex;"><span>  IdentityFile ~/.ssh/company_rsa
+</span></span></code></pre></div><p>As seen in the above code, in the <code>Host</code> sections, simply define a name for each GitLab user account to use its corresponding address for the remote URL and connection with GitLab.</p>
+<h3 id="changes-related-to-remote-repository-addresses">Changes related to remote repository addresses</h3>
+<p>Go to GitLab and the respective repository location. Copy the address in the <code>Clone with SSH</code> section, apply the relevant changes, and ultimately clone. For example, if the remote address is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git@gitlab.com:company/repo.git
+</span></span></code></pre></div><p>With regard to the host defined in the configuration file, modify it as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git@yournameCompanyUsername.gitlab.com:company/repo.git
+</span></span></code></pre></div><h3 id="reconfiguring-git-for-each-repository">Reconfiguring Git for each repository</h3>
+<p>Pay attention to your Git configuration. If you have globally set something previously, make sure to redefine it for each repository to avoid committing with a different email or name in the wrong repository/account.</p>
+<p>To do this, go to the respective repository and execute the following two commands according to the user account:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config user.email <span style="color:#e6db74">&#34;your_email@example.com&#34;</span>
+</span></span><span style="display:flex;"><span>git config user.name <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span></code></pre></div><p>This ensures that the configuration is specific to each repository, preventing unintentional commits with incorrect credentials.&quot;</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/gitlab"
+      >GitLab</a
+    >
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
+      href="https://shimadotdev.github.io/tags/muliple-user-gitlab"
+      >Muliple User Gitlab</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://shimadotdev.github.io/posts/docker-image-container/"
+      ><span>Docker Guide for Beginners: Dockerfile, Image and Container</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://shimadotdev.github.io/">Shima Dot Dev Blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

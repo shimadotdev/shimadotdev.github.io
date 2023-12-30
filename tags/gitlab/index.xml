@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitLab on Shima Dot Dev Blog</title>
+    <link>https://shimadotdev.github.io/tags/gitlab/</link>
+    <description>Recent content in GitLab on Shima Dot Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shimadotdev.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH connection to GitLab with more than one user account.</title>
+      <link>https://shimadotdev.github.io/posts/gitlab-ssh-multiple-users/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://shimadotdev.github.io/posts/gitlab-ssh-multiple-users/</guid>
+      <description>Imagine you have a personal user account on GitLab with the email yourname@gmail.com, and now you&amp;rsquo;ve been hired by a company. You need to connect to GitLab with the email account they provided for you (yourname@company.com). If you&amp;rsquo;ve previously added your system&amp;rsquo;s public key for your personal account and SSH connection, you may encounter an error when trying to add the same key for the company&amp;rsquo;s GitLab account. This error informs you that the key has already been added because GitLab doesn&amp;rsquo;t allow using a common SSH public key across two different user accounts.</description>
+    </item>
+  </channel>
+</rss>
