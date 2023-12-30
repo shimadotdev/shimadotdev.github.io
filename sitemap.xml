@@ -2,32 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shimadotdev.github.io/tags/docker-for-beginners/</loc>
-    <lastmod>2018-08-21T00:00:00+00:00</lastmod>
+    <loc>https://shimadotdev.github.io/tags/deploy-container/</loc>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/docker-keyword/</loc>
-    <lastmod>2018-08-21T00:00:00+00:00</lastmod>
+    <loc>https://shimadotdev.github.io/tags/docker-for-beginners/</loc>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/posts/docker-image-container/</loc>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/tags/docker-image/</loc>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://shimadotdev.github.io/tags/dockerfile/</loc>
-    <lastmod>2018-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://shimadotdev.github.io/posts/</loc>
-    <lastmod>2018-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://shimadotdev.github.io/</loc>
-    <lastmod>2018-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://shimadotdev.github.io/tags/</loc>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shimadotdev.github.io/posts/docker-keywords/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

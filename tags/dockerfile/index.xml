@@ -6,13 +6,20 @@
     <description>Recent content in Dockerfile on Shima Dot Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Sep 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://shimadotdev.github.io/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Docker Guide for Beginners: Dockerfile, Image and Container</title>
+      <link>https://shimadotdev.github.io/posts/docker-image-container/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://shimadotdev.github.io/posts/docker-image-container/</guid>
+      <description>Docker Installation Before anything else, it is necessary to install Docker on your system. For installation on Mac, Windows, and Ubuntu, you can use Docker&amp;rsquo;s official guide.&#xA;Building an Image Let&amp;rsquo;s start by creating our first image in the simplest way possible:&#xA;First, create a directory in the terminal using the command mkdir myfirst.&#xA;In the next step, create a Dockerfile with touch Dockerfile.&#xA;Enter the following commands into the Dockerfile:</description>
+    </item>
+    <item>
       <title>Docker Guide for Beginners: Keywords in Docker</title>
-      <link>https://shimadotdev.github.io/posts/docker-keyword/</link>
+      <link>https://shimadotdev.github.io/posts/docker-keywords/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://shimadotdev.github.io/posts/docker-keyword/</guid>
+      <guid>https://shimadotdev.github.io/posts/docker-keywords/</guid>
       <description>Docker Engine The Docker Engine is the layer on which Docker runs, and its task is to manage containers, images, building, etc. This layer sits right above the host machine&amp;rsquo;s operating system and performs its tasks by receiving commands from the client (for example, the terminal).&#xA;Dockerfile A Dockerfile is where the necessary instructions for building an image are written. If you take a look at existing Dockerfiles, you will see sample commands like RUN apt-get install something; these commands allow us to install necessary packages for running software in an isolated container environment, assign ports, or define directories.</description>
     </item>
   </channel>
