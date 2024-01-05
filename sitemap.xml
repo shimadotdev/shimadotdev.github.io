@@ -2,137 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shimadotdev.github.io/tags/gitlab/</loc>
+    <loc>https://shima.dev/tags/gitlab/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/muliple-user-gitlab/</loc>
+    <loc>https://shima.dev/tags/muliple-user-gitlab/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/</loc>
+    <loc>https://shima.dev/posts/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/</loc>
+    <loc>https://shima.dev/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/gitlab-ssh-multiple-users/</loc>
+    <loc>https://shima.dev/posts/gitlab-ssh-multiple-users/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/</loc>
+    <loc>https://shima.dev/tags/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/deploy-container/</loc>
+    <loc>https://shima.dev/tags/deploy-container/</loc>
     <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/docker-for-beginners/</loc>
+    <loc>https://shima.dev/tags/docker-for-beginners/</loc>
     <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/docker-image-container/</loc>
+    <loc>https://shima.dev/posts/docker-image-container/</loc>
     <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/docker-image/</loc>
+    <loc>https://shima.dev/tags/docker-image/</loc>
     <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/dockerfile/</loc>
+    <loc>https://shima.dev/tags/dockerfile/</loc>
     <lastmod>2018-09-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/docker-keywords/</loc>
+    <loc>https://shima.dev/posts/docker-keywords/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/unionfs/</loc>
+    <loc>https://shima.dev/tags/unionfs/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/containerization/</loc>
+    <loc>https://shima.dev/tags/containerization/</loc>
     <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/devops/</loc>
+    <loc>https://shima.dev/tags/devops/</loc>
     <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/whats-docker/</loc>
+    <loc>https://shima.dev/posts/whats-docker/</loc>
     <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/telegram-bot/</loc>
+    <loc>https://shima.dev/posts/telegram-bot/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/telegram-bot/</loc>
+    <loc>https://shima.dev/tags/telegram-bot/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/workplace-visibility/</loc>
+    <loc>https://shima.dev/tags/workplace-visibility/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/developer-lifestyle/</loc>
+    <loc>https://shima.dev/tags/developer-lifestyle/</loc>
     <lastmod>2017-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/developer-lifestyle/</loc>
+    <loc>https://shima.dev/posts/developer-lifestyle/</loc>
     <lastmod>2017-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/lifestyle/</loc>
+    <loc>https://shima.dev/tags/lifestyle/</loc>
     <lastmod>2017-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/developer-experience/</loc>
+    <loc>https://shima.dev/tags/developer-experience/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/posts/developer-experience/</loc>
+    <loc>https://shima.dev/posts/developer-experience/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/dx/</loc>
+    <loc>https://shima.dev/tags/dx/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/tags/good-api/</loc>
+    <loc>https://shima.dev/tags/good-api/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shimadotdev.github.io/categories/</loc>
+    <loc>https://shima.dev/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
