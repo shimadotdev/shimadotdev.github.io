@@ -2,6 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shima.dev/tags/iran-cities/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/iran-cities-geolocation/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/iran-regions/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/posts/iran-regions-laravel-package/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/laravel-package/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/posts/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shima.dev/tags/gitlab/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -12,22 +52,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://shima.dev/posts/</loc>
-    <lastmod>2021-02-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shima.dev/</loc>
-    <lastmod>2021-02-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://shima.dev/posts/gitlab-ssh-multiple-users/</loc>
-    <lastmod>2021-02-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shima.dev/tags/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Laravel Package on Shima Dot Dev Blog</title>
+    <link>https://shima.dev/tags/laravel-package/</link>
+    <description>Recent content in Laravel Package on Shima Dot Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shima.dev/tags/laravel-package/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iran Regions Laravel Package</title>
+      <link>https://shima.dev/posts/iran-regions-laravel-package/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://shima.dev/posts/iran-regions-laravel-package/</guid>
+      <description>In my recent project, I needed a list of Iranian regions containing provinces and cities, along with their coordinate locations. After realizing the importance of this data in multiple projects, I decided to encapsulate it into a reusable package - IranRegions.&#xA;What is IranRegions? IranRegions is a Laravel package designed to provide developers with comprehensive Iranian province and city data within their Laravel applications. It includes detailed information such as province names, city names, geolocation coordinates, and calling codes, making it a one-stop solution for managing location-based applications in Iran.</description>
+    </item>
+  </channel>
+</rss>
