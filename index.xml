@@ -6,8 +6,15 @@
     <description>Recent content on Shima Dot Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://shima.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Go: Movicall CLI App</title>
+      <link>https://shima.dev/posts/moviecall-cli-golang-package/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://shima.dev/posts/moviecall-cli-golang-package/</guid>
+      <description>Movicall started as a learning project to get hands-on experience with Go. I wanted to understand its unique features, especially concurrency and goroutines. By building Movicall, I aimed to create something practical while sharpening my programming skills.&#xA;What is Moviecall? Movicall is a CLI app designed for searching movies and TV shows by their name. The results are displayed in a table format, providing complete names, ratings, languages, genres, and links to detailed webpages on the TMDB (The Movie Database) site.</description>
+    </item>
     <item>
       <title>Iran Regions Laravel Package</title>
       <link>https://shima.dev/posts/iran-regions-laravel-package/</link>

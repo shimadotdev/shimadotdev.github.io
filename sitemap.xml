@@ -2,6 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shima.dev/posts/moviecall-cli-golang-package/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/github/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/golang-package/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/learning-golang/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/moviecall/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/posts/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shima.dev/tags/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shima.dev/tags/iran-cities/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,21 +63,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://shima.dev/tags/laravel-package/</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shima.dev/posts/</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shima.dev/</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://shima.dev/tags/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
